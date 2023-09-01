@@ -13,9 +13,9 @@ def calcStats(df):
     return weighted_mean, weighted_std
 
 
-Meetdata = pd.read_csv('NoB_NoD_Meet.csv')
+Meetdata = pd.read_csv('Data/NoB_NoD_Meet.csv')
 avgM, stdM = calcStats(Meetdata)
-Crossdata = pd.read_csv("NoB_NoD_Cross.csv")
+Crossdata = pd.read_csv("Data/NoB_NoD_Cross.csv")
 avgC, stdC = calcStats(Crossdata)
 plt.scatter(Meetdata['Moves'], Meetdata['Frequencies'], label=f"To Meet, mean = {avgM}, std = {stdM} ", s=10)
 plt.scatter(Crossdata['Moves'], Crossdata['Frequencies'], label=f"To Cross, mean = {avgC}, std = {stdC} ", s=10)
